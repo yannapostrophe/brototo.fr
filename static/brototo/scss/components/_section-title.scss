@@ -1,0 +1,166 @@
+@use '../utils' as *;
+
+/*=============================
+	09. Section Title
+===============================*/
+.section__title {
+    & .sub-title {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 1;
+        font-family: var(--tg-paragraph-font-family);
+    }
+    & .sub-title2 {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 1;
+        font-family: var(--tg-paragraph-font-family);
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+    & .title {
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 3.75rem;
+        text-transform: capitalize;
+        line-height: 1.166;
+        @media #{$lg} {
+            font-size: 3rem;
+        }
+        @media #{$xs} {
+            font-size: 2rem;
+        }
+        @media #{$sm} {
+            font-size: 2.5rem;
+        }
+        & br {
+            @media #{$md} {
+                display: none;
+            }
+        }
+        &.title2 {
+            font-family: var(--tg-heading2-font-family);
+            font-weight: 700;
+        }
+    }
+    & .shadow-title {
+        font-weight: 400;
+        font-size: 300px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        -webkit-text-stroke-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-fill-color: var(--tg-heading-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to top, transparent 14%, var(--tg-color-white-default));
+        margin-top: -60px;
+        position: relative;
+        z-index: -1;
+        opacity: 0.7;
+        @media #{$lg} {
+            font-size: 200px;
+        }
+        @media #{$md} {
+            font-size: 150px;
+            margin-top: -40px;
+        }
+        @media #{$xs} {
+            font-size: 100px;
+            margin-top: -25px;
+        }     
+        @media #{$vxs} {
+            font-size: 80px;
+        }
+    }
+    & p {
+        margin-bottom: 0;
+        margin-top: 10px;
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+    & .sec-text {
+        font-size: 18px;
+        margin-top: 28px;
+        opacity: 0.8;
+        @media #{$xs} {
+            font-size: 16px;
+        }
+    }
+    & .sec-text2 {
+        font-size: 20px;
+        font-family: var(--tg-heading2-font-family);
+        margin-top: 28px;
+        line-height: 1.5em;
+        letter-spacing: -0.015em;
+        @media #{$xs} {
+            font-size: 16px;
+        }
+    }
+    & .sec-text3 {
+        font-size: 20px;
+        margin-top: 28px;
+        line-height: 1.5em;
+        letter-spacing: -0.015em;
+        @media #{$xs} {
+            font-size: 16px;
+        }
+    }
+    &-two {
+        border-top: 1px solid var(--tg-heading-color);
+        border-bottom: 1px solid var(--tg-heading-color);
+        padding: 40px 0 31px;
+        @media (min-width: 1920px) {
+            .title {
+                margin-left: -20px;
+            }
+        }
+    }
+    &-three {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 44px;
+            height: 1px;
+            background: var(--tg-color-white-default);
+        }
+    }
+    &.white-title {
+        & .sub-title {
+            color: var(--tg-color-gray-5);
+            & svg {
+                color: var(--tg-color-light-blue);
+            }
+        }
+        & .title {
+            color: var(--tg-color-white-default);
+        }
+        & p {
+            color: var(--tg-color-gray-5);
+        }
+    }
+    &.mb-40 {
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    @media #{$xs} {
+        font-size: 24px;
+    }
+}

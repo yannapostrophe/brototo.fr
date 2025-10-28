@@ -1,0 +1,33 @@
+@use '../utils' as *;
+
+/*=============================
+    04. Background color
+===============================*/
+.grey-bg {
+	background: var(--tg-color-gray-1);
+}
+.white-bg {
+	background: var(--tg-color-white-default);
+}
+.black-bg {
+	background: var(--tg-heading-color);
+}
+.black2-bg {
+	background: var(--tg-color-black-2);
+}
+.dark-bg {
+	background: var(--tg-color-dark);
+}
+.theme-bg {
+	background: var(--tg-theme-primary);
+}
+
+/*=============================
+    Background Shape
+===============================*/
+.bg-parralax {
+	background-attachment: fixed;
+}
+.bg-cover {
+	background-size: cover;
+}

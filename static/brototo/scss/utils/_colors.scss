@@ -1,0 +1,45 @@
+$colors: (
+    body: (
+        color: #0A0C00,
+    ),
+    heading: (
+        color: #05080A,
+    ),
+    theme: (
+        primary: rgb(69, 248, 130),
+    ),
+    color: (
+        dark-blue: #0E104B,
+        dark-blue-2: #001950,
+        light-blue: #7149D2,
+        yellow-default: #FCE300,
+        yellow-light: #F9EADC,
+        white-default: #ffffff,
+        white-2: rgba(255,255,255,0.6),
+        white-3: rgba(255,255,255,0.7),
+        white-4: rgba(255,255,255,0.4),
+        red-default: #ED1730,
+        gray-1: #666666,
+        gray-2: #FFFAF0,
+        gray-3: #C2A8C2,
+        gray-4: #F7F4F7,
+        gray-5: #8FA5D6,
+        gray-6: #D0DAEF,
+        gray-7: #9399A6,
+        dark: #000000,
+        black-1: #060606,
+        black-2: #0B0F13,
+        black-3: #151D22,
+    ),
+    border: (
+        1: #C8C2C8,
+        2: #D0CACA,
+        3: #CCD2E1,
+        4: #DBE3EB,
+        5: #F8F8F8,
+        6: #E6E6E6,
+    )
+);
+.text-theme {
+    color: var(--tg-theme-primary) !important;
+}

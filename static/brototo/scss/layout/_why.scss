@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+/*=============================
+    Why Choose Us 01
+===============================*/
+/*skill-feature**************/
+.skill-feature {
+    position: relative;
+    max-width: 565px;
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    &_title {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: var(--tg-heading-font-family);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: var(--tg-color-white-default);
+    } 
+    .progress {
+        background: rgba($color: #ffffff, $alpha: 0.1);
+        border-radius: 0;
+        overflow: visible;
+        height: 4px;
+        .progress-bar {
+            background: var(--tg-theme-primary);
+            border-radius: 0;
+            height: 4px;
+        }
+        .progress-value {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: var(--tg-heading-font-family);
+            position: absolute;
+            top: -5px;
+            right: 0;
+            color: var(--tg-color-white-default);
+        }
+    }
+}

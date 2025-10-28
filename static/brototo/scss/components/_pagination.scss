@@ -1,0 +1,38 @@
+@use '../utils' as *;
+
+/*=============================
+	1. Pagination
+===============================*/
+.pagination__wrap {
+    & ul {
+        gap: 10px 12px;
+        @media #{$xs} {
+            gap: 10px;
+        }
+    }
+    & .page-numbers {
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background-color: var(--tg-color-dark);
+        border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+        color: var(--tg-color-white-default);
+        @include border-radius(0px);
+        font-weight: 500;
+		font-size: 14px;
+        @media #{$xs} {
+            width: 40px;
+            height: 40px;
+            font-size: 14px;
+        }
+		&:hover,
+        &.current {
+            background-image: none;
+            border-color: var(--tg-theme-primary);
+            background-color: var(--tg-theme-primary);
+            color: var(--tg-common-color-black-2);
+        }
+    }
+}

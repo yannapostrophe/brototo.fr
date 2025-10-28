@@ -1,0 +1,107 @@
+@use '../utils' as *;
+
+/*=============================
+    Client
+===============================*/
+.client-card {
+    display: block;
+    text-align: center;
+    opacity: 0.6;
+    transition: 0.4s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+/*=============================
+    Client 2
+===============================*/
+.client-list-wrap {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: -15px;
+    .client-card2 {
+        display: inline-block;
+        margin: 15px;
+        a {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--tg-color-black-3);
+            transition: 0.4s;
+            &:hover {
+                background: var(--tg-theme-primary);
+                img {
+                    filter: invert(1) brightness(0) grayscale(1); 
+                }
+            }
+        }
+        &.big-client-card2 {
+            a {
+                width: 410px;
+                height: 410px;
+                img {
+                    height: 78px;
+                }
+            }
+        }
+    }
+    @media #{$xl} {
+        max-width: 1180px;
+        .client-card2 {
+            a {
+                width: 160px;
+                height: 160px;
+                img {
+                    height: 35px;
+                }
+            }
+            &.big-client-card2 {
+                a {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+    }
+    @media #{$lg} {
+        .client-card2 {
+            width: calc(33.3333% - 30px);
+            a {
+                width: 100%;
+                height: auto;
+                border-radius: 30px;
+                padding: 50px 10px;
+            }
+            &.big-client-card2 {
+                a {
+                    width: 100%;
+                    height: auto;
+                    img {
+                        height: 35px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$xs} {
+        .client-card2 {
+            width: -webkit-fill-available;
+        }
+    }
+    @media #{$sm} {
+        .client-card2 {
+            width: calc(50% - 30px);
+        }
+    }
+}

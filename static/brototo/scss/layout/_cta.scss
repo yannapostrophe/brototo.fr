@@ -1,0 +1,24 @@
+@use '../utils' as *;
+
+/*=============================
+    Cta Area 1
+===============================*/
+.cta-thumb1-1 {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: -70px;
+    z-index: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 27px 4px 65px 54px;
+        z-index: -1;
+        border-radius: 50%;
+        background: linear-gradient(205.39deg, var(--tg-theme-primary) 12.33%, #030201 87.34%);
+    }
+    @media #{$lg} {
+        margin-bottom: 60px;
+        margin-top: -60px;
+    }
+}

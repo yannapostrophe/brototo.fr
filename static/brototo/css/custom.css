@@ -1,0 +1,58 @@
+/* Custom CSS by Brototo team */
+
+.upper-case {
+    text-transform: uppercase !important;
+}
+
+.blog__post-meta a {
+    color: var(--tg-theme-primary);
+}
+
+.language-btn {
+    border: none;
+    background: none;
+}
+
+.cta-thumb1-1 {
+  position: relative;
+  display: inline-block;
+}
+
+.corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+/* Coin haut gauche */
+.corner-top-left {
+  top: -10px;
+  left: -10px;
+  border-top: 3px solid var(--tg-theme-primary);
+  border-left: 3px solid var(--tg-theme-primary);
+}
+
+/* Coin haut droit */
+.corner-top-right {
+  top: -10px;
+  right: -10px;
+  border-top: 3px solid var(--tg-theme-primary);
+  border-right: 3px solid var(--tg-theme-primary);
+}
+
+/* Coin bas gauche */
+.corner-bottom-left {
+  bottom: -10px;
+  left: -10px;
+  border-bottom: 3px solid var(--tg-theme-primary);
+  border-left: 3px solid var(--tg-theme-primary);
+}
+
+/* Coin bas droit */
+.corner-bottom-right {
+  bottom: -10px;
+  right: -10px;
+  border-bottom: 3px solid var(--tg-theme-primary);
+  border-right: 3px solid var(--tg-theme-primary);
+}

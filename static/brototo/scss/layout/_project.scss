@@ -1,0 +1,447 @@
+@use '../utils' as *;
+
+/*=============================
+    Project 01
+===============================*/
+.project-card {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 2px solid var(--tg-theme-primary);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.4s;
+        opacity: 0;
+    }
+    .project-thumb {
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+            transition: 0.4s;
+        }
+        &:before {
+            background: var(--tg-color-dark);
+            opacity: 0;
+        }
+        img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+    }
+    .project-details {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        width: -webkit-fill-available;
+        transition: 0.4s;
+        .project-meta {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 0px 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            li {
+                color: var(--tg-color-white-default);
+                font-size: 18px;
+                position: relative;
+                &:after {
+                    content: '-';
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .project-title {
+        font-size: 70px;
+        font-weight: 400;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        a {
+            color: var(--tg-color-white-default);
+        }
+    }
+    .hover-wrap {
+        position: absolute;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        z-index: 1;
+        transition: 0.4s;
+        opacity: 0;
+        .project-title {
+            margin-right: 80px !important;
+            a {
+                font-size: 70px !important;
+                letter-spacing: normal;
+            }
+            span {
+                color: rgba($color: #ffffff, $alpha: 0.2);
+                margin-left: 80px;
+            }
+        }
+    }
+    &:hover {
+        &:after {
+            opacity: 1;
+        }
+        .project-thumb {
+            &:after {
+                opacity: 0;
+            }
+            &:before {
+                opacity: 0.9;
+            }
+        }
+        .project-details {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .hover-wrap {
+            opacity: 1;
+        }
+    }
+    @media (max-width: 1500px) {
+        .project-details {
+            max-width: 1250px;
+        }
+    }
+    @media #{$ml} {
+        &:after {
+            width: 250px;
+            height: 250px;
+        }
+        .project-title {
+            font-size: 54px;
+        }
+        .hover-wrap {
+            .project-title {
+                a {
+                    font-size: 54px !important;
+                }
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        .project-details {
+            padding: 0 15px;
+        }
+        .project-title {
+            font-size: 48px;
+        }
+        .hover-wrap {
+            .project-title {
+                a {
+                    font-size: 48px !important;
+                }
+            }
+        }
+    }
+    @media #{$lg} {
+        .project-details {
+            max-width: 960px;
+        }
+        &:after {
+            width: 200px;
+            height: 200px;
+        }
+        .project-title {
+            font-size: 40px;
+        }
+        .hover-wrap .project-title {
+            margin-right: 40px !important;
+            span {
+                margin-left: 40px;
+            }
+            a {
+                font-size: 40px !important;
+            }
+        }
+    }
+    @media #{$md} {
+        .project-thumb {
+            img {
+                height: 300px;
+            }
+        }
+        .project-details {
+            max-width: 720px;
+            .project-meta li {
+                font-size: 16px;
+            }
+        }
+    }
+    @media #{$xs} {
+        &:after {
+            width: 150px;
+            height: 150px;
+        }
+        .project-title {
+            font-size: 30px;
+        }
+        .hover-wrap .project-title a {
+            font-size: 30px !important;
+        }
+        .hover-wrap .project-title span {
+            margin-left: 25px;
+        }
+        .hover-wrap .project-title {
+            margin-right: 25px !important;
+        }
+        .project-details {
+            bottom: 30px;
+            .project-meta li {
+                font-size: 14px;
+            }
+        }
+    }
+    @media #{$sm} {
+        .project-details {
+            max-width: 540px;
+        }
+        .project-title {
+            font-size: 36px;
+        }
+        .hover-wrap .project-title a {
+            font-size: 36px !important;
+        }
+    }
+}
+
+/*=============================
+    Project 02
+===============================*/
+.project-area-2 {
+    background-image: linear-gradient(#000000, #000000);
+    background-repeat: no-repeat;
+    background-size: 100% calc(100% - 163px);
+    @media #{$md} {
+        background-size: 100% calc(100% - 148px);
+    }
+    @media #{$xs} {
+        background-size: 100% calc(100% - 117px);
+    }
+}
+.project-slider2 {
+    padding: 0 16px;
+    .slider-pagination {
+        text-align: center;
+        margin-top: 62px;
+        position: relative;
+        bottom: 0 !important;
+        margin-bottom: -5px;
+        .swiper-pagination-bullet {
+            --swiper-pagination-bullet-width: 24px;
+            --swiper-pagination-bullet-height: 2px;
+            --swiper-pagination-bullet-horizontal-gap: 5px;
+            border-radius: 0;
+            background: rgba($color: #ffffff, $alpha: 0.2);
+            opacity: 1;
+            transition: 0.4s;
+            &.swiper-pagination-bullet-active {
+                background: var(--tg-theme-primary);
+            }
+        }
+    }
+    @media #{$xs} {
+        .slider-pagination {
+            margin-top: 32px;
+        }
+    }
+    @media #{$vxs} {
+        .slider-pagination {
+            .swiper-pagination-bullet {
+                --swiper-pagination-bullet-width: 20px;
+            }
+        }
+    }
+}
+.project-card2 {
+    .project-thumb {
+        overflow: hidden;
+        .thumb {
+            display: block;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .project-card-details {
+        margin-top: 32px;
+        .project-card-subtitle {
+            color: var(--tg-theme-primary);
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .project-card-title {
+            margin-bottom: -0.2em;
+            font-size: 40px;
+            font-weight: 400;
+            color: var(--tg-color-white-default);
+            text-transform: uppercase;
+            @media #{$xl} {
+                font-size: 30px;
+            }
+            @media #{$lg} {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+/*=============================
+    Project 03
+===============================*/
+.project-card3 {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--tg-heading-color);
+        opacity: 0;
+        transition: 0.4s;
+    }
+    .project-thumb {
+        img {
+            width: 100%;
+        }
+    }
+    .project-card-details {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scaleY(0);
+        transition: 0.4s;
+        z-index: 1;
+    }
+    &:hover {
+        &:after {
+            opacity: 0.9;
+        }
+        .project-card-details {
+            transform: translate(-50%, -50%) scaleY(1);
+        }
+    }
+}
+
+/*=============================
+    Job page
+===============================*/
+.job-card {
+    position: relative;
+    margin-top: -0.3em;
+    .job-card_title {
+        font-size: 120px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--tg-color-white-default);
+        margin-bottom: 0;
+        margin-top: -0.16em;
+    }
+    .job-card_text {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba($color: #ffffff, $alpha: 0.7);
+        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+        padding-top: 15px;
+        margin-top: -30px;
+        z-index: 1;
+        position: relative;
+        background: var(--tg-heading-color);
+        margin-bottom: 0;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            background: var(--tg-theme-primary);
+            height: 1px;
+            transition: 0.4s;
+        } 
+    }
+    .btn {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        transform: scaleY(0);
+    }
+    &:hover {
+        .job-card_text {
+            &:after {
+                width: 100%;
+            }
+        }
+        .btn {
+            transform: scaleY(1);
+        }
+    }
+    @media #{$xl} {
+        .job-card_title {
+            font-size: 90px;
+        }
+        .btn {
+            top: 15px;
+        }
+        .job-card_text {
+            margin-top: -20px;
+        }
+    }
+    @media #{$lg} {
+        .job-card_title {
+            font-size: 70px;
+            margin-top: -0.15em;
+        }
+        .job-card_text {
+            margin-top: -15px;
+        }
+        .btn {
+            position: initial;
+            margin-top: 25px;
+            transform: scaleY(1);
+        }
+    }
+    @media #{$md} {
+        .job-card_title {
+            font-size: 60px;
+        }
+        .job-card_text {
+            margin-top: -12px;
+        }
+    }
+    @media #{$xs} {
+        .job-card_text {
+            font-size: 16px;
+            margin-top: -10px;
+        }
+        .job-card_title {
+            font-size: 40px;
+        }
+    }
+}
